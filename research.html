@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research — Owen Dvorak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">Owen Dvorak</a>
+    <div class="nav-links">
+        <a href="work.html">Work</a>
+        <a href="research.html">Research</a>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="partners.html">For Partners</a>
+        <a href="students.html">For Students</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero hero-research">
+    <div class="hero-inner">
+        <p class="hero-eyebrow hero-eyebrow-green">Clinical Research</p>
+        <h1 class="hero-title">Research</h1>
+        <p class="hero-sub">Data entry and analysis on active studies across pediatric oncology, hematology, and surgery. Four conditions, all on the hem/onc and surgical spectrum.</p>
+    </div>
+</section>
+
+<!-- Framing -->
+<section class="section bg-white">
+    <div class="container">
+        <p class="section-label label-green">What this is</p>
+        <h2 class="section-title">Where I am in the research pipeline</h2>
+        <div class="prose">
+            <p>Clinical research at this stage is data work: entry, cleaning, and analysis on active studies run by physicians and research teams at major institutions. My role across these four projects is to handle the data carefully and learn the conditions deeply — how they're diagnosed, how treatment decisions are made, what the outcomes literature says, where the open questions are.</p>
+            <p>These aren't disconnected resume lines. Severe aplastic anemia, leukemia, and neuroblastoma all sit in pediatric hematology/oncology — the specialty I'm heading toward. The obesity surgery project is surgical outcomes research, a different part of the spectrum but the same rigor. Each project builds clinical intuition that lectures don't provide.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Research cards -->
+<section class="section bg-sage">
+    <div class="container">
+        <p class="section-label label-green">Active studies</p>
+        <h2 class="section-title">Current projects</h2>
+        <div class="grid-2" style="margin-top:2rem;">
+
+            <div class="research-card">
+                <div class="research-card-label">Hematology</div>
+                <div class="research-card-title">Pediatric Severe Aplastic Anemia</div>
+                <div class="research-card-body">
+                    <p style="margin-bottom:0.75rem;">SAA is a life-threatening bone marrow failure syndrome in which the immune system destroys hematopoietic stem cells. In pediatric patients, treatment decisions involve immunosuppressive therapy versus bone marrow transplant — with outcomes heavily dependent on donor match quality, disease severity, and timing.</p>
+                    <p style="font-size:0.85rem; color:var(--text-muted); font-style:italic;">Role: data entry and analysis</p>
+                </div>
+            </div>
+
+            <div class="research-card">
+                <div class="research-card-label">Oncology</div>
+                <div class="research-card-title">Pediatric Leukemia</div>
+                <div class="research-card-body">
+                    <p style="margin-bottom:0.75rem;">Leukemia is the most common pediatric malignancy. Research in this area addresses treatment stratification, relapse prediction, and long-term outcomes — including the late effects of chemotherapy and radiation that shape quality of life for survivors.</p>
+                    <p style="font-size:0.85rem; color:var(--text-muted); font-style:italic;">Role: data entry and analysis</p>
+                </div>
+            </div>
+
+            <div class="research-card">
+                <div class="research-card-label">Oncology</div>
+                <div class="research-card-title">Neuroblastoma</div>
+                <div class="research-card-body">
+                    <p style="margin-bottom:0.75rem;">Neuroblastoma is the most common extracranial solid tumor in children, arising from neural crest cells. High-risk neuroblastoma carries a poor prognosis despite aggressive multimodal therapy. Research focuses on risk stratification, treatment response, and outcomes in high-risk patients.</p>
+                    <p style="font-size:0.85rem; color:var(--text-muted); font-style:italic;">Role: data entry and analysis</p>
+                </div>
+            </div>
+
+            <div class="research-card">
+                <div class="research-card-label">Surgery</div>
+                <div class="research-card-title">Pediatric Obesity Surgery</div>
+                <div class="research-card-body">
+                    <p style="margin-bottom:0.75rem;">Bariatric surgery in pediatric patients is performed in a narrow subset of adolescents with severe obesity and obesity-related comorbidities. Research addresses short- and long-term surgical outcomes, metabolic changes, and the factors that predict durable benefit versus complications.</p>
+                    <p style="font-size:0.85rem; color:var(--text-muted); font-style:italic;">Role: data entry and analysis</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Trajectory note -->
+<section class="section bg-white">
+    <div class="container" style="max-width:680px;">
+        <div class="callout callout-green">
+            <p>Three of these four conditions — SAA, leukemia, neuroblastoma — are treated in part with bone marrow transplantation. This work connects directly to the NMDP internship and to the trajectory toward pediatric hematology/oncology. The research isn't happening in isolation from the clinical interests; it's the same field.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <p>Owen Dvorak &nbsp;·&nbsp; oedvorak@ucsd.edu</p>
+        <div style="display:flex; gap:1.25rem;">
+            <a href="index.html">Home</a>
+            <a href="work.html">Work</a>
+            <a href="philosophy.html">Philosophy</a>
+            <a href="partners.html">Partners</a>
+            <a href="students.html">Students</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function(){
+    document.getElementById('nav').classList.toggle('nav-scrolled', window.scrollY > 20);
+});
+document.querySelectorAll('.nav-links a').forEach(function(link){
+    if(link.href === window.location.href) link.classList.add('active');
+});
+</script>
+</body>
+</html>
