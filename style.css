@@ -53,6 +53,14 @@ body {
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 
+/* ---- Heading font ---- */
+h1, h2, h3,
+.hero-title, .section-title, .section-title-lg,
+.card-title, .work-block-heading, .research-card-title,
+.portal-title, .subsection-title, .philosophy-block h3 {
+    font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
+}
+
 /* ---- Navigation ---- */
 .nav {
     position: fixed;
@@ -552,6 +560,36 @@ ul { list-style: none; }
     margin-bottom: 1.1rem;
 }
 .philosophy-block p:last-child { margin-bottom: 0; }
+
+/* ---- Solid-color accent bands ---- */
+.band-orange { background: var(--orange); color: #fff; padding: 56px 2rem; }
+.band-purple { background: var(--purple); color: #fff; padding: 56px 2rem; }
+.band-green  { background: var(--green);  color: #fff; padding: 56px 2rem; }
+.band-dark   { background: #111;          color: #fff; padding: 56px 2rem; }
+
+.stat-row {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.stat-item { text-align: center; }
+.stat-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+.stat-desc {
+    font-size: 0.88rem;
+    opacity: 0.85;
+    line-height: 1.4;
+    max-width: 140px;
+}
 
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
