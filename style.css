@@ -164,6 +164,42 @@ h1, h2, h3,
 }
 .hero-center .hero-ctas { justify-content: center; }
 
+/* ---- Hero dot pattern overlay ---- */
+.hero-home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.065) 1px, transparent 1px);
+    background-size: 26px 26px;
+    pointer-events: none;
+    z-index: 0;
+}
+.hero-split-wrapper { position: relative; z-index: 1; }
+
+/* ---- Scroll indicator ---- */
+.scroll-indicator {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: rgba(255,255,255,0.3);
+    animation: si-bounce 2.2s ease-in-out infinite;
+    z-index: 1;
+}
+.scroll-indicator svg { width: 20px; height: 20px; }
+@keyframes si-bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.3; }
+    50%       { transform: translateX(-50%) translateY(7px); opacity: 0.6; }
+}
+
+/* ---- Wave section dividers ---- */
+.wave-divider { line-height: 0; overflow: hidden; }
+.wave-divider svg { display: block; width: 100%; }
+
 /* ---- Hero split (home page) ---- */
 .hero-split-wrapper {
     display: flex;
@@ -645,6 +681,11 @@ h1, h2, h3,
     border: 1px solid var(--border);
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     gap: 0.65rem;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+.role-chip:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 .role-icon {
     width: 44px;
